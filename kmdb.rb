@@ -268,7 +268,7 @@ puts "======"
 
 all_movies = Movie.all
 for movie in all_movies
-    puts "#{movie["title"]} #{movie["year_released"]} #{movie["rated"]} #{studio["name"]}"
+    puts "#{movie["title"]} | #{movie["year_released"]} | #{movie["rated"]} #{studio["name"]}"
 end 
 
 
@@ -287,5 +287,5 @@ for role in all_roles
     movie_title = Movie.find_by({"id" => role["movie_id"]})
     # query to find the actor name for this role
     actor_name = Actor.find_by({"id" => role["actor_id"]})
-    puts "#{movie_title["title"]} #{actor_name["name"]} #{role["character_name"]}"
+    puts "#{movie_title["title"]} | #{actor_name["name"]} | #{role["character_name"]}"
 end
